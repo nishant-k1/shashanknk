@@ -1,0 +1,175 @@
+.main {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  background-color: rgba(3 0 24 / 0.83);
+  display: flex;
+  justify-content: end;
+  padding: 2rem;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.nav {
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  @media screen and (min-width: 768px) {
+    padding: 2rem;
+    width: 1100px;
+  }
+}
+
+.nav > h1 > a {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+}
+
+.nav > h1 a {
+  text-decoration: none;
+}
+
+.nav ul {
+  display: flex;
+  max-width: 1100px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-gap: 2rem;
+}
+
+.nav ul li {
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline 0.3s;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  background-color: rgba(3 0 24 / 0.83);
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.hero {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 4rem;
+  align-items: center;
+  column-gap: 10rem;
+  max-width: 1100px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.hero h1 {
+  color: lab(100 0 -0.03 / 0.78);
+  font-size: xx-large;
+}
+
+.heroImage {
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+.about {
+  max-width: 1100px;
+  padding: 2rem;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.about p {
+  margin-bottom: 2rem;
+}
+.about h2 {
+  margin-bottom: 2rem;
+}
+
+.contactUs {
+  max-width: 1100px;
+  padding: 2rem;
+  @media screen and (min-width: 768px) {
+    width: 1100px;
+    flex-direction: row;
+    justify-content: start;
+  }
+}
+
+.footer {
+}
+
+.footerSecondary {
+  display: flex;
+  justify-content: start;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.footerNav {
+  max-width: 1100px;
+  padding: 2rem;
+  @media screen and (min-width: 768px) {
+    width: 1100px;
+  }
+}
+
+.footerNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.footerNav ul li {
+  padding: 0;
+  margin: 0;
+}
+
+.footerNav ul li a {
+}
+
+.footerPrimary {
+  display: flex;
+  justify-content: start;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.footerPrimary div {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  max-width: 1100px;
+  @media screen and (min-width: 768px) {
+    width: 1100px;
+  }
+}
+
+.footerPrimary a {
+}
