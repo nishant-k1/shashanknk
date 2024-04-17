@@ -128,14 +128,14 @@ const HomeView = ({}: HomeViewProps) => {
               <li>
                 <Link href="#contact">Contact Us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#privacy-policy">Privacy Policy</Link>
               </li>
               <li>
                 <Link href="#terms-of-service">Terms of Service</Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="#disclaimer">Disclaimer</Link>
+                <Link href="/disclaimer">Disclaimer</Link>
               </li>
             </ul>
           </nav>
