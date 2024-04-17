@@ -9,12 +9,11 @@ const DisclaimerView = (props: Props) => {
       <Header />
       <main
         style={{
-          color: "black",
-          background: "oklab(0.15 0 -0.06 / 0.87)",
+          background: "rgba(3 0 24 / 0.83)",
           height: "100vh",
           display: "flex",
           justifyContent: "center",
-          padding: "4rem 0",
+          padding: "2rem 0",
         }}
       >
         <div

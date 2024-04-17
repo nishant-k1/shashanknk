@@ -5,6 +5,7 @@ import styles from "./HomeView.module.css";
 import Image from "next/image";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
+import Link from "next/link";
 
 type HomeViewProps = {};
 
@@ -69,7 +70,16 @@ const HomeView = ({}: HomeViewProps) => {
             सशक्तिकरण के साथ है, उन्हें एक मजबूत भारत की रीढ़ के रूप में पहचानते
             हुए।
           </p>
-          <p>🚀🇮🇳 #BJP #BJYM #बिहार #begusarai</p>
+          <p>
+            🚀🇮🇳{" "}
+            <span>
+              <Link href="https://www.bjp.org/home">#BJP</Link>
+            </span>{" "}
+            <span>
+              <Link href="https://bjym.org/">#BJYM </Link>
+            </span>
+            #बिहार #begusarai
+          </p>
           {/* More about the organization */}
         </div>
       </section>
