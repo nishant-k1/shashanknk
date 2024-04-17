@@ -20,16 +20,20 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  max-width: 100%;
+  width: 100%;
   @media screen and (min-width: 768px) {
     padding: 2rem;
-    width: 1100px;
+    width: 1050px;
   }
 }
 
 .nav > h1 > a {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: 100;
+  font-size: large;
+  @media screen and (min-width: 768px) {
+    font-size: xx-large;
+  }
 }
 
 .nav > h1 a {
@@ -38,21 +42,31 @@
 
 .nav ul {
   display: flex;
-  max-width: 1100px;
+  max-width: 1050px;
   list-style: none;
   padding: 0;
   margin: 0;
-  column-gap: 2rem;
+  column-gap: 1rem;
+  @media screen and (min-width: 768px) {
+    column-gap: 2rem;
+  }
 }
 
 .nav ul li {
   padding: 0;
   margin: 0;
+  font-size: small;
+  display: flex;
+  width: fit-content;
+  @media screen and (min-width: 768px) {
+    font-size: medium;
+  }
 }
 .nav ul li a {
   padding: 0;
   margin: 0;
   text-decoration: none;
+
   transition: text-decoration 0.5s, color 0.5s; /* Adding color transition */
 }
 
@@ -78,7 +92,7 @@
   row-gap: 4rem;
   align-items: center;
   column-gap: 4rem;
-  max-width: 1100px;
+  max-width: 1050px;
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
@@ -86,17 +100,23 @@
 
 .hero h1 {
   color: lab(100 0 -0.03 / 0.78);
-  font-size: xx-large;
+  font-size: x-large;
+  @media screen and (min-width: 768px) {
+    font-size: xx-large;
+  }
 }
 
 .heroImage {
   object-fit: contain;
   height: auto;
-  width: 54%;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 54%;
+  }
 }
 
 .about {
-  max-width: 1100px;
+  max-width: 1050px;
   padding: 2rem;
 }
 .about {
@@ -111,10 +131,10 @@
 }
 
 .contactUs {
-  max-width: 1100px;
+  max-width: 1050px;
   padding: 2rem;
   @media screen and (min-width: 768px) {
-    width: 1100px;
+    width: 1050px;
     flex-direction: row;
     justify-content: start;
   }
@@ -132,10 +152,10 @@
 }
 
 .footerNav {
-  max-width: 1100px;
+  max-width: 1050px;
   padding: 2rem;
   @media screen and (min-width: 768px) {
-    width: 1100px;
+    width: 1050px;
   }
 }
 
@@ -166,10 +186,10 @@
   display: flex;
   padding: 2rem;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1050px;
   font-size: small;
   @media screen and (min-width: 768px) {
-    width: 1100px;
+    width: 1050px;
     justify-content: space-between;
   }
 }

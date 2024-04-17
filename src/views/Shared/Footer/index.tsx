@@ -11,6 +11,11 @@ const Footer = (props: Props) => {
         <nav className={styles.footerNav}>
           <ul>
             <li>
+              <h1>
+                <Link href="/">Shashank Shekhar</Link>
+              </h1>
+            </li>
+            <li>
               <Link href="/">Home</Link>
             </li>
             <li>
@@ -18,6 +23,11 @@ const Footer = (props: Props) => {
             </li>
             <li>
               <Link href="/#contact">Contact Us</Link>
+            </li>
+            <li>
+              <Link href="https://www.facebook.com/shashanknk.shekhar/">
+                Facebook
+              </Link>
             </li>
             {/* <li>
                 <Link href="#privacy-policy">Privacy Policy</Link>

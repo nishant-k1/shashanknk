@@ -16,7 +16,7 @@ const DisclaimerView = (props: Props) => {
         >
           <div
             style={{
-              maxWidth: "1100px",
+              maxWidth: "1050px",
               padding: "2rem",
               fontSize: "large",
               display: "flex",
