@@ -35,7 +35,7 @@ const HomeView = ({}: HomeViewProps) => {
             <h2>About Us</h2>
             <div>
               <Image
-                src="/dpSS.jpeg"
+                src="/dpSS.png"
                 alt="Hero Image"
                 height="150"
                 width="150"
