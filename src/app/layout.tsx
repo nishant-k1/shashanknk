@@ -1,5 +1,6 @@
 import "./globals.css";
-
+import Header from "@/views/Shared/Header";
+import Footer from "@/views/Shared/Footer";
 export const props = {};
 
 export default function RootLayout({
@@ -9,7 +10,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

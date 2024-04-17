@@ -1,9 +1,15 @@
 import React from "react";
 import DisclaimerView from "@/views/DisclaimerView";
+import RootLayout from "@/app/layout";
+
 type Props = {};
 
 const about = (props: Props) => {
-  return <DisclaimerView />;
+  return (
+    <RootLayout>
+      <DisclaimerView />
+    </RootLayout>
+  );
 };
 
 export default about;
