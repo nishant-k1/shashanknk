@@ -5,12 +5,12 @@ type Props = {};
 
 const DisclaimerView = (props: Props) => {
   return (
-    <>
+    <main>
       <Header />
-      <main
+      <div
         style={{
           background: "rgba(3 0 24 / 0.83)",
-          height: "100vh",
+          height: "100%",
           display: "flex",
           justifyContent: "center",
           padding: "2rem 0",
@@ -67,9 +67,9 @@ const DisclaimerView = (props: Props) => {
             ANY INFORMATION CONTAINED ON THE SITE IS SOLELY AT YOUR OWN RISK.
           </p>
         </div>
-      </main>
+      </div>
       <Footer />
-    </>
+    </main>
   );
 };
 
