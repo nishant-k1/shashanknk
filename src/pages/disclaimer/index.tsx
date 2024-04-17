@@ -1,9 +1,9 @@
 import React from "react";
-
+import DisclaimerView from "@/views/DisclaimerView";
 type Props = {};
 
 const about = (props: Props) => {
-  return <div>about</div>;
+  return <DisclaimerView />;
 };
 
 export default about;

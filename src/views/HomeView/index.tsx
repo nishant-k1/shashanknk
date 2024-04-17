@@ -2,34 +2,16 @@
 // src/pages/index.tsx
 import React from "react";
 import styles from "./HomeView.module.css";
-import Link from "next/link";
 import Image from "next/image";
+import Header from "../Shared/Header";
+import Footer from "../Shared/Footer";
 
 type HomeViewProps = {};
 
 const HomeView = ({}: HomeViewProps) => {
   return (
     <main className={styles.main}>
-      {/* Header Section */}
-      <header className={styles.header}>
-        <nav className={styles.nav}>
-          <h1>
-            <Link href="#">Shashank Shekhar</Link>
-          </h1>
-          <ul>
-            <li>
-              <Link href="#">Home</Link>
-            </li>
-            <li>
-              <Link href="#about">About Us</Link>
-            </li>
-            <li>
-              <Link href="#contact">Contact Us</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
       {/* Hero Section */}
       <section className={styles.section} id="home" style={{ padding: "0" }}>
         <div className={styles.hero}>
@@ -115,45 +97,7 @@ const HomeView = ({}: HomeViewProps) => {
       </section>
 
       {/* Footer Section */}
-      <footer className={styles.footer}>
-        <div className={styles.footerSecondary}>
-          <nav className={styles.footerNav}>
-            <ul>
-              <li>
-                <Link href="#">Home</Link>
-              </li>
-              <li>
-                <Link href="#about">About Us</Link>
-              </li>
-              <li>
-                <Link href="#contact">Contact Us</Link>
-              </li>
-              {/* <li>
-                <Link href="#privacy-policy">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="#terms-of-service">Terms of Service</Link>
-              </li> */}
-              <li>
-                <Link href="/disclaimer">Disclaimer</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className={styles.footerPrimary}>
-          <div>
-            <p>&copy; 2024 Shashank Shekhar. All rights reserved.</p>
-            <p>
-              Designed & Developed by
-              <span style={{ marginLeft: "4px" }}>
-                <Link href="https://www.quengenesisllc.com/#/">
-                  Quengenesis
-                </Link>
-              </span>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 };

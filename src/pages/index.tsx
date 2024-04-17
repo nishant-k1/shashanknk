@@ -1,12 +1,12 @@
 import React from "react";
-import DisclaimerView from "@/views/DisclaimerView";
 import RootLayout from "@/app/layout";
+import HomeView from "@/views/HomeView";
 type Props = {};
 
 const page = (props: Props) => {
   return (
     <RootLayout>
-      <DisclaimerView />
+      <HomeView />
     </RootLayout>
   );
 };

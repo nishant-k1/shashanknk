@@ -39,7 +39,8 @@ a {
   margin: 0;
   color: lab(100 0 -0.03 / 0.78);
   text-decoration: none;
+  color: #d88a4f;
 }
 a:hover {
-  text-decoration: 2px underline yellow;
+  text-decoration: 2px underline #d63d29;
 }
