@@ -21,7 +21,7 @@ const HomeView = ({}: HomeViewProps) => {
             लिए काम करें! 🚀🇮🇳 #BJP #BJYM #बिहार
           </h1>
           <Image
-            src="/hero.png"
+            src="/hero.svg"
             height="300"
             width="300"
             alt={""}
