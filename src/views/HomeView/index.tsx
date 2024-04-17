@@ -96,7 +96,7 @@ const HomeView = ({}: HomeViewProps) => {
           <address>
             Email: ss@shashanknk.in <br />
             Phone: 8871993468 <br />
-            Address: Professor Colony, Begusarai, Bihar - 851101
+            Address: Ward-15, Pipra, Professor Colony, Begusarai, Bihar - 851117
           </address>
           <div>{/* Social media icons/links */}</div>
         </div>
