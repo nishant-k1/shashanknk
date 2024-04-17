@@ -29,7 +29,6 @@
 
 .nav > h1 > a {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-weight: 100;
   font-size: large;
   @media screen and (min-width: 768px) {
     font-size: xx-large;
