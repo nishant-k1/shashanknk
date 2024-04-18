@@ -88,17 +88,24 @@ const HomeView = ({}: HomeViewProps) => {
         <section id="contact" className={styles.section}>
           <div className={styles.contactUs}>
             <h2>Contact Us</h2>
-            <br />
-            <p>पूछताछ के लिए, कृपया हमसे संपर्क करें::</p>
+            <p></p>
             <br />
             <br />
             {/* Contact Information */}
+            <p> पूछताछ के लिए, कृपया हमसे संपर्क करें:</p>
+            <br />
             <address>
-              Email: ss@shashanknk.in <br />
-              Phone: 8871993468 <br />
+              <Link href="mailto:ss@shashanknk.in">
+                Email: ss@shashanknk.in
+              </Link>
+              <br />
+              <Link href="tel:8871993468">Phone: 8871993468</Link>
+              <br />
+              <br />
               Address: Ward-15, Pipra, Professor Colony, Begusarai, Bihar -
               851117
             </address>
+
             <div>{/* Social media icons/links */}</div>
           </div>
         </section>
