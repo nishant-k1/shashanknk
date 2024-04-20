@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./HomeView.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import CarouselView from "../CarouselView";
 
 type HomeViewProps = {};
 
@@ -14,18 +15,7 @@ const HomeView = ({}: HomeViewProps) => {
         {/* Hero Section */}
         <section className={styles.section} id="home" style={{ padding: "0" }}>
           <div className={styles.hero}>
-            <h1>
-              हम समाज में सकारात्मक परिवर्तन और प्रगति को बढ़ावा देने के लिए
-              पूर्ण जोश और उत्साह से समर्पित हैं। आइए, हम मिलकर एक बेहतर, मजबूत
-              भारत के लिए काम करें!
-            </h1>
-            <Image
-              src="/hero.svg"
-              height="300"
-              width="300"
-              alt={""}
-              className={styles.heroImage}
-            />
+            <CarouselView />
           </div>
         </section>
 
