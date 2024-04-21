@@ -57,7 +57,10 @@ const Footer = (props: Props) => {
       </div>
       <div className={styles.footerPrimary}>
         <div>
-          <p>&copy; 2024 Shashank Shekhar. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Shashank Shekhar. All rights
+            reserved.
+          </p>
           <p>
             Designed & developed by
             <span style={{ marginLeft: "4px" }}>
