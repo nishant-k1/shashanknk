@@ -124,12 +124,6 @@
   }
 }
 
-.about p,
-.about h1,
-.about h2 {
-  margin-bottom: 2rem;
-}
-
 .aboutImg {
   margin-bottom: 2rem;
   @media screen and (min-width: 768px) {
@@ -137,6 +131,13 @@
     width: 454px;
     border-radius: 12px;
   }
+}
+
+.about p,
+.about h1,
+.about h2 {
+  margin-bottom: 2rem;
+  height: min-content;
 }
 
 /* Contact Us section */

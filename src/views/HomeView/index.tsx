@@ -78,6 +78,8 @@ const HomeView = ({}: HomeViewProps) => {
             </div>
           </div>
         </section>
+
+        {/* Testimonial Section */}
         <section className={`${styles.section} ${styles.testimonialSection} `}>
           <div className={`${styles.tetimonial}`}>
             <h1>
