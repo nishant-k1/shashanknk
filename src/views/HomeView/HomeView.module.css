@@ -140,6 +140,29 @@
   height: min-content;
 }
 
+/* Testimonial Section */
+.tetimonial {
+  @media screen and (min-width: 768px) {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+    justify-content: space-between;
+    /* justify-items: end; */
+  }
+}
+
+.testimonialSection {
+  background-color: hwb(246.43 20% 69.02% / 0.98);
+}
+
+.tetimonial div {
+  width: 300px;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+}
 /* Contact Us section */
 .contactSection {
   background-color: #986040;
@@ -161,27 +184,6 @@
   color: white;
 }
 
-.tetimonial {
-  @media screen and (min-width: 768px) {
-    width: 1050px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: space-between;
-    /* justify-items: end; */
-  }
-}
-
-.testimonialSection {
-  background-color: hwb(246.43 20% 69.02% / 0.98);
-}
-
-.tetimonial div {
-  width: 300px;
-  @media screen and (min-width: 768px) {
-    width: 100%;
-  }
-}
 .footer {
 }
 
