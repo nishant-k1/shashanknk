@@ -9,10 +9,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }

@@ -6,6 +6,10 @@
 }
 
 .header {
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  top: 0;
   background-color: rgba(3 0 24 / 0.83);
   display: flex;
   justify-content: end;
@@ -28,7 +32,7 @@
 }
 
 .nav > h1 > a {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
   font-size: large;
   @media screen and (min-width: 768px) {
     font-size: xx-large;
@@ -128,6 +132,7 @@
   @media screen and (min-width: 768px) {
     height: 464px;
     width: 454px;
+    border-radius: 12px;
   }
 }
 .contactSection {
@@ -149,6 +154,24 @@
   color: white;
 }
 
+.tetimonial {
+  @media screen and (min-width: 768px) {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    /* justify-items: end; */
+  }
+}
+
+.testimonialSection {
+  background-color: hwb(246.43 20% 69.02% / 0.98);
+}
+
+.tetimonial div {
+  /* width: 50%; */
+}
 .footer {
 }
 

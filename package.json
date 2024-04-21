@@ -21,7 +21,8 @@
     "icons": "link:@types/@chakra-ui/icons",
     "next": "14.2.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-tweet-embed": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

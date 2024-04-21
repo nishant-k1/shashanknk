@@ -5,6 +5,7 @@ import styles from "./HomeView.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import CarouselView from "../CarouselView";
+import TweetEmbed from "react-tweet-embed";
 
 type HomeViewProps = {};
 
@@ -22,21 +23,18 @@ const HomeView = ({}: HomeViewProps) => {
           <div>
             <h2>About Us</h2>
             <div className={styles.about}>
-              <Link href="/gallery">
-                <Image
-                  src="/dpSS.png"
-                  alt="Hero Image"
-                  height="300"
-                  width="300"
-                />
-              </Link>
+              <div>
+                <Link href="/gallery">
+                  <Image
+                    src="/dpSS.png"
+                    alt="Hero Image"
+                    height="300"
+                    width="300"
+                  />
+                </Link>
+              </div>
               <div>
                 <div>
-                  <h1>
-                    हम समाज में सकारात्मक परिवर्तन और प्रगति को बढ़ावा देने के
-                    लिए पूर्ण जोश और उत्साह से समर्पित हैं। आइए, हम मिलकर एक
-                    बेहतर, मजबूत भारत के लिए काम करें!
-                  </h1>
                   <p>
                     आपका भाजपा युवा मोर्चा बिहार के साथ नेतृत्व में एक दृढ़
                     साझेदारी का स्वागत है, शशांक शेखर जी। हमारे धारावाहिकता के
@@ -83,7 +81,18 @@ const HomeView = ({}: HomeViewProps) => {
             </div>
           </div>
         </section>
-
+        <section className={`${styles.section} ${styles.testimonialSection} `}>
+          <div className={`${styles.tetimonial}`}>
+            <h1>
+              हम समाज में सकारात्मक परिवर्तन और प्रगति को बढ़ावा देने के लिए
+              पूर्ण जोश और उत्साह से समर्पित हैं। आइए, हम मिलकर एक बेहतर, मजबूत
+              भारत के लिए काम करें!
+            </h1>
+            <div>
+              <TweetEmbed tweetId="1106845118479233024" />
+            </div>
+          </div>
+        </section>
         {/* Contact Us Section */}
         <section
           id="contact"
