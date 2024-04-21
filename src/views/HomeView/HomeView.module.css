@@ -9,7 +9,7 @@
   background-color: rgba(3 0 24 / 0.83);
   display: flex;
   justify-content: end;
-  padding: 2rem;
+  padding: 1rem 2rem;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -22,7 +22,7 @@
   justify-content: space-between;
   width: 100%;
   @media screen and (min-width: 768px) {
-    padding: 2rem;
+    padding: 0 2rem;
     width: 1050px;
   }
 }
@@ -77,24 +77,24 @@
 .section {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  padding: 2rem 0;
   background-color: rgba(3 0 24 / 0.83);
   @media screen and (min-width: 768px) {
     justify-content: center;
+    padding: 4rem 0;
   }
 }
-
-.hero {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column-reverse;
-  row-gap: 4rem;
-  align-items: center;
-  column-gap: 4rem;
+.section > div {
   max-width: 1050px;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
+  padding: 0 2rem;
+}
+
+.heroImage {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  height: 80vh;
+  width: 100vw;
 }
 
 .hero h1 {
@@ -105,38 +105,48 @@
   }
 }
 
-.heroImage {
-  object-fit: contain;
-  height: auto;
-  width: 100%;
+.about {
+  max-width: 1050px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
   @media screen and (min-width: 768px) {
-    width: 54%;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 4rem;
   }
 }
 
-.about {
-  max-width: 1050px;
-  padding: 2rem;
-}
-.about {
-  display: flex;
-  flex-direction: column;
-}
-.about p {
+.about p,
+.about h1 {
   margin-bottom: 2rem;
 }
 .about h2 {
   margin-bottom: 2rem;
 }
-
+.about img {
+  @media screen and (min-width: 768px) {
+    height: 464px;
+    width: 454px;
+  }
+}
+.contactSection {
+  background-color: #986040;
+}
 .contactUs {
   max-width: 1050px;
   padding: 2rem;
   @media screen and (min-width: 768px) {
+    display: flex;
     width: 1050px;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
   }
+}
+
+.contactUs a,
+.contactUs address {
+  color: white;
 }
 
 .footer {
@@ -144,7 +154,7 @@
 
 .footerSecondary {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -153,7 +163,11 @@
 .footerNav {
   max-width: 1050px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   @media screen and (min-width: 768px) {
+    flex-direction: row;
     width: 1050px;
   }
 }
@@ -175,7 +189,7 @@
 
 .footerPrimary {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
