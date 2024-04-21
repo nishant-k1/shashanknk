@@ -9,7 +9,7 @@
   background-color: rgba(3 0 24 / 0.83);
   display: flex;
   justify-content: end;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -77,11 +77,17 @@
 .section {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  padding: 2rem 0;
   background-color: rgba(3 0 24 / 0.83);
   @media screen and (min-width: 768px) {
     justify-content: center;
+    padding: 4rem 0;
   }
+}
+.section > div {
+  max-width: 1050px;
+  padding: 0 2rem;
 }
 
 .heroImage {
@@ -101,26 +107,31 @@
 
 .about {
   max-width: 1050px;
-  padding: 2rem;
-}
-.about {
   display: flex;
   flex-direction: column;
+  padding-top: 4rem;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 4rem;
+  }
 }
+
 .about p {
   margin-bottom: 2rem;
 }
 .about h2 {
   margin-bottom: 2rem;
 }
-
+.about img {
+}
 .contactUs {
   max-width: 1050px;
   padding: 2rem;
   @media screen and (min-width: 768px) {
     width: 1050px;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 
@@ -129,7 +140,7 @@
 
 .footerSecondary {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -160,7 +171,7 @@
 
 .footerPrimary {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }

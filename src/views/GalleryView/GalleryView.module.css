@@ -1,0 +1,20 @@
+.gallery {
+  padding: 2rem 4rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 12px;
+  background-color: coral;
+  justify-content: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Allow items to grow and shrink to fit available width */
+  /* grid-template-columns: repeat(4, auto); */
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}

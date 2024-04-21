@@ -17,6 +17,7 @@
     "@types/antd": "^1.0.0",
     "antd": "^5.16.2",
     "framer-motion": "^11.1.3",
+    "generate-unique-id": "^2.0.3",
     "icons": "link:@types/@chakra-ui/icons",
     "next": "14.2.1",
     "react": "^18",

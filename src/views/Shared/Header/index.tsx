@@ -19,6 +19,9 @@ const Header = (props: Props) => {
             <Link href="/#about">About Us</Link>
           </li>
           <li>
+            <Link href="/gallery">Gallery</Link>
+          </li>
+          <li>
             <Link href="/#contact">Contact Us</Link>
           </li>
         </ul>
