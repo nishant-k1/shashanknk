@@ -45,7 +45,6 @@
 
 .nav ul {
   display: flex;
-  max-width: 1050px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -92,8 +91,10 @@
 }
 
 .section > div {
-  max-width: 1050px;
   padding: 0 2rem;
+  @media screen and (min-width: 768px) {
+    width: 1050px;
+  }
 }
 
 .heroImage {
@@ -113,12 +114,12 @@
 
 /* ABOUT SECTION */
 .about {
-  max-width: 1050px;
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
   align-items: flex-start;
   @media screen and (min-width: 768px) {
+    width: 1050px;
     flex-direction: row;
     column-gap: 4rem;
   }
@@ -169,7 +170,6 @@
 }
 
 .contactUs {
-  max-width: 1050px;
   padding: 2rem;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -196,7 +196,6 @@
 }
 
 .footerNav {
-  max-width: 1050px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -234,7 +233,6 @@
   display: flex;
   padding: 2rem;
   align-items: center;
-  max-width: 1050px;
   font-size: small;
   @media screen and (min-width: 768px) {
     width: 1050px;
