@@ -9,12 +9,10 @@ const Footer = (props: Props) => {
     <footer className={styles.footer}>
       <div className={styles.footerSecondary}>
         <nav className={styles.footerNav}>
+          <h1>
+            <Link href="/">Shashank Shekhar</Link>
+          </h1>
           <ul>
-            <li>
-              <h1>
-                <Link href="/">Shashank Shekhar</Link>
-              </h1>
-            </li>
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -27,11 +25,7 @@ const Footer = (props: Props) => {
             <li>
               <Link href="/#contact">Contact Us</Link>
             </li>
-            <li>
-              <Link href="https://www.facebook.com/shashanknk.shekhar/">
-                Facebook
-              </Link>
-            </li>
+
             {/* <li>
                 <Link href="#privacy-policy">Privacy Policy</Link>
               </li>
@@ -40,6 +34,23 @@ const Footer = (props: Props) => {
               </li> */}
             <li>
               <Link href="/disclaimer">Disclaimer</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link href="https://x.com/shankyshekhar02?t=CUqNekL1aQz6QN2Di8LPPA&s=08">
+                Twitter
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.facebook.com/shashanknk.shekhar/">
+                Facebook
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.instagram.com/shankyshekhar02?igsh=cHJyNTl3MGhwZXQ=">
+                Instagram
+              </Link>
             </li>
           </ul>
         </nav>

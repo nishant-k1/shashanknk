@@ -117,22 +117,36 @@
   }
 }
 
-.about p {
+.about p,
+.about h1 {
   margin-bottom: 2rem;
 }
 .about h2 {
   margin-bottom: 2rem;
 }
 .about img {
+  @media screen and (min-width: 768px) {
+    height: 464px;
+    width: 454px;
+  }
+}
+.contactSection {
+  background-color: #986040;
 }
 .contactUs {
   max-width: 1050px;
   padding: 2rem;
   @media screen and (min-width: 768px) {
+    display: flex;
     width: 1050px;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
+}
+
+.contactUs a,
+.contactUs address {
+  color: white;
 }
 
 .footer {
@@ -149,7 +163,11 @@
 .footerNav {
   max-width: 1050px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   @media screen and (min-width: 768px) {
+    flex-direction: row;
     width: 1050px;
   }
 }
