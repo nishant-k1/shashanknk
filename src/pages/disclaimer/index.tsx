@@ -4,7 +4,7 @@ import RootLayout from "@/app/layout";
 
 type Props = {};
 
-const disclaimer = (props: Props) => {
+const Disclaimer = (props: Props) => {
   return (
     <RootLayout>
       <DisclaimerView />
@@ -12,4 +12,4 @@ const disclaimer = (props: Props) => {
   );
 };
 
-export default disclaimer;
+export default Disclaimer;

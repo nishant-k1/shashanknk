@@ -10,13 +10,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div style={{ position: "relative" }}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <html>
+      <body>
+        <div style={{ position: "relative" }}>
+          <Head>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </body>
+    </html>
   );
 }

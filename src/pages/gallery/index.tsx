@@ -1,14 +1,16 @@
 import React from "react";
 import GalleryView from "@/views/GalleryView";
 import RootLayout from "@/app/layout";
-type Props = {};
+type Props = {
+  id: string;
+};
 
-const gallery = (props: Props) => {
+const Gallery = ({ id }: Props) => {
   return (
     <RootLayout>
-      <GalleryView />{" "}
+      <GalleryView id={id} />
     </RootLayout>
   );
 };
 
-export default gallery;
+export default Gallery;

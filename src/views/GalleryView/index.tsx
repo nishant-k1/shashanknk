@@ -2,22 +2,33 @@ import React from "react";
 import { galleryImages } from "./galleryImages";
 import styles from "./GalleryView.module.css"; // Import CSS module for styling
 import Image from "next/image";
+import Link from "next/link";
 
-const GalleryView = () => {
+type GalleryViewProps = {
+  id: string;
+};
+
+const GalleryView = ({ id }: GalleryViewProps) => {
   return (
     <div className={styles.gallery}>
       {galleryImages.map((image) => {
         return (
-          <div key={image.id} className={styles.item}>
+          <Link
+            href={{
+              pathname: "/gallery/[slug]",
+              query: { slug: image.url },
+            }}
+            key={image.id}
+            className={styles.item}
+          >
             <Image
               src={image.url}
               alt=""
-              // fill={true}
               height={image.height}
               width={image.width}
               className={styles.image}
             />
-          </div>
+          </Link>
         );
       })}
     </div>
