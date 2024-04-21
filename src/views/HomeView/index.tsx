@@ -29,6 +29,7 @@ const HomeView = ({}: HomeViewProps) => {
                   alt="Hero Image"
                   height="300"
                   width="300"
+                  className={styles.aboutImg}
                 />
               </Link>
               <div>

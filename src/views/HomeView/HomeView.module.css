@@ -90,6 +90,7 @@
     padding: 4rem 0;
   }
 }
+
 .section > div {
   max-width: 1050px;
   padding: 0 2rem;
@@ -119,8 +120,6 @@
   align-items: start;
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    align-items: start;
-    justify-content: flex-start;
     column-gap: 4rem;
   }
 }
@@ -131,7 +130,7 @@
   margin-bottom: 2rem;
 }
 
-.about img {
+.aboutImg {
   margin-bottom: 2rem;
   @media screen and (min-width: 768px) {
     height: 464px;
@@ -139,6 +138,8 @@
     border-radius: 12px;
   }
 }
+
+/* Contact Us section */
 .contactSection {
   background-color: #986040;
 }
