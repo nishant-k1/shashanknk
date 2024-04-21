@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.6",
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
@@ -19,15 +20,12 @@
     "icons": "link:@types/@chakra-ui/icons",
     "next": "14.2.1",
     "react": "^18",
-    "react-dom": "^18",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/react-slick": "^0.23.13",
     "eslint": "^8",
     "eslint-config-next": "14.2.1",
     "typescript": "^5"

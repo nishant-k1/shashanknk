@@ -13,10 +13,8 @@ const HomeView = ({}: HomeViewProps) => {
     <>
       <main className={styles.main}>
         {/* Hero Section */}
-        <section className={styles.section} id="home" style={{ padding: "0" }}>
-          <div className={styles.hero}>
-            <CarouselView />
-          </div>
+        <section id="home" style={{ padding: "0" }}>
+          <CarouselView />
         </section>
 
         {/* About Us Section */}

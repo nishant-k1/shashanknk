@@ -9,7 +9,7 @@
   background-color: rgba(3 0 24 / 0.83);
   display: flex;
   justify-content: end;
-  padding: 0.5rem 2rem;
+  padding: 0 2rem;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -84,18 +84,11 @@
   }
 }
 
-.hero {
-  /* padding: 2rem;
-  display: flex;
-  flex-direction: column-reverse;
-  row-gap: 4rem;
-  align-items: center;
-  column-gap: 4rem;
-  max-width: 1050px;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  } */
-  background-color: white;
+.heroImage {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  height: 80vh;
+  width: 100vw;
 }
 
 .hero h1 {
@@ -104,12 +97,6 @@
   @media screen and (min-width: 768px) {
     font-size: xx-large;
   }
-}
-
-.heroImage {
-  object-fit: cover;
-  height: auto;
-  width: 100%;
 }
 
 .about {
