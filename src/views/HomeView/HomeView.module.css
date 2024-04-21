@@ -56,8 +56,6 @@
 
 .nav ul li {
   padding: 0;
-  border-right: 1px solid coral;
-  padding-right: 12px;
   margin: 0;
   font-size: small;
   display: flex;
