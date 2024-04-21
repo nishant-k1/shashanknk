@@ -110,28 +110,29 @@
   }
 }
 
+/* ABOUT SECTION */
 .about {
   max-width: 1050px;
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
+  align-items: start;
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    align-items: start;
     justify-content: flex-start;
     column-gap: 4rem;
   }
 }
 
 .about p,
-.about h1 {
-  margin-bottom: 2rem;
-}
+.about h1,
 .about h2 {
   margin-bottom: 2rem;
 }
+
 .about img {
   margin-bottom: 2rem;
-
   @media screen and (min-width: 768px) {
     height: 464px;
     width: 454px;
@@ -141,6 +142,7 @@
 .contactSection {
   background-color: #986040;
 }
+
 .contactUs {
   max-width: 1050px;
   padding: 2rem;
