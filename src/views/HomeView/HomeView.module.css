@@ -130,6 +130,8 @@
   margin-bottom: 2rem;
 }
 .about img {
+  margin-bottom: 2rem;
+
   @media screen and (min-width: 768px) {
     height: 464px;
     width: 454px;
@@ -171,7 +173,10 @@
 }
 
 .tetimonial div {
-  /* width: 50%; */
+  width: 300px;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 .footer {
 }
