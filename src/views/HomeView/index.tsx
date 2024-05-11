@@ -23,15 +23,17 @@ const HomeView = ({}: HomeViewProps) => {
           <div>
             <h2>About Us</h2>
             <div className={styles.about}>
-              <Link href="/gallery">
-                <Image
-                  src="/dpSS.png"
-                  alt="Hero Image"
-                  height="300"
-                  width="300"
-                  className={styles.aboutImg}
-                />
-              </Link>
+              <div>
+                <Link href="/gallery">
+                  <Image
+                    src="/dpSS.png"
+                    alt="Hero Image"
+                    height="300"
+                    width="300"
+                    className={styles.aboutImg}
+                  />
+                </Link>
+              </div>
               <div>
                 <p>
                   आपका भाजपा युवा मोर्चा बिहार के साथ नेतृत्व में एक दृढ़
