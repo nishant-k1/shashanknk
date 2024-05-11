@@ -56,20 +56,18 @@ const Footer = (props: Props) => {
         </nav>
       </div>
       <div className={styles.footerPrimary}>
-        <div>
-          <p>
-            &copy; {new Date().getFullYear()} Shashank Shekhar. All rights
-            reserved.
-          </p>
-          <p>
-            Designed & developed by
-            <span style={{ marginLeft: "4px" }}>
-              <Link href="https://www.quengenesisllc.com/#/">
-                Quengenesis LLC
-              </Link>
-            </span>
-          </p>
-        </div>
+        <p>
+          &copy; {new Date().getFullYear()} Shashank Shekhar. All rights
+          reserved.
+        </p>
+        <p>
+          Designed & developed by
+          <span style={{ marginLeft: "4px" }}>
+            <Link href="https://www.quengenesisllc.com/#/">
+              Quengenesis LLC
+            </Link>
+          </span>
+        </p>
       </div>
     </footer>
   );
