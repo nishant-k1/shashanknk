@@ -11,26 +11,28 @@ type GalleryViewProps = {
 const GalleryView = ({ id }: GalleryViewProps) => {
   return (
     <div className={styles.gallery}>
-      {galleryImages.map((image) => {
-        return (
-          <Link
-            href={{
-              pathname: "/gallery/[slug]",
-              query: { slug: image.url },
-            }}
-            key={image.id}
-            className={styles.item}
-          >
-            <Image
-              src={image.url}
-              alt=""
-              height={image.height}
-              width={image.width}
-              className={styles.image}
-            />
-          </Link>
-        );
-      })}
+      <div>
+        {galleryImages.map((image) => {
+          return (
+            <Link
+              href={{
+                pathname: "/gallery/[slug]",
+                query: { slug: image.url },
+              }}
+              key={image.id}
+              className={styles.item}
+            >
+              <Image
+                src={image.url}
+                alt=""
+                height={image.height}
+                width={image.width}
+                className={styles.image}
+              />
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -1,15 +1,15 @@
 .gallery {
-  padding: 2rem 7.5rem;
+  background-color: coral;
+}
+
+.gallery div {
+  padding: 2rem;
   margin: 0 auto;
   display: grid;
   grid-gap: 12px;
-  background-color: coral;
+  max-width: 1920px;
   justify-content: center;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Allow items to grow and shrink to fit available width */
-  /* grid-template-columns: repeat(4, auto); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .item img {
