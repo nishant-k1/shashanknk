@@ -3,6 +3,68 @@ import generateUniqueId from "generate-unique-id";
 export const galleryImages = [
   {
     id: generateUniqueId(),
+    url: "/galleryImages/gallery0.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery40.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery44.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery43.jpeg",
+    height: 1080,
+    width: 768,
+  },
+
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery45.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery41.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery46.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery47.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery42.jpeg",
+    height: 1080,
+    width: 768,
+  },
+  {
+    id: generateUniqueId(),
+    url: "/galleryImages/gallery48.jpeg",
+    height: 1080,
+    width: 768,
+  },
+
+  {
+    id: generateUniqueId(),
     url: "/galleryImages/gallery1.jpeg",
     height: 1080,
     width: 768,
@@ -13,6 +75,7 @@ export const galleryImages = [
     height: 1080,
     width: 768,
   },
+
   {
     id: generateUniqueId(),
     url: "/galleryImages/gallery3.jpeg",
@@ -183,12 +246,6 @@ export const galleryImages = [
     height: 1080,
     width: 768,
   },
-  // {
-  //   id: generateUniqueId(),
-  //   url: "/galleryImages/gallery31.jpeg",
-  //   height: 1080,
-  //   width: 768,
-  // },
   {
     id: generateUniqueId(),
     url: "/galleryImages/gallery32.jpeg",
