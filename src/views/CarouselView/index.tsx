@@ -8,6 +8,15 @@ export default function CarouselView() {
     <Carousel autoplay autoplaySpeed={2000}>
       <div>
         <Image
+          src="/heroAssets/shashank-modiji.jpeg"
+          height="900"
+          width="2100"
+          alt={""}
+          className={styles.heroImage}
+        />
+      </div>
+      <div>
+        <Image
           src="/heroAssets/hero1.jpeg"
           height="900"
           width="2100"
