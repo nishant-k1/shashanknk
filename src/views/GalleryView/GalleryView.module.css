@@ -1,5 +1,6 @@
 .gallery {
   background-color: coral;
+  padding: 12px;
   column-count: 4; /* Number of columns */
   column-gap: 12px; /* Space between columns */
 }
