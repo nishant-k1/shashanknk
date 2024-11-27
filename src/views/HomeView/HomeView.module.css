@@ -94,6 +94,11 @@
   height: 90vh;
   object-fit: contain;
   object-position: bottom;
+  @media screen and (max-width: 768px) {
+    object-fit: contain;
+    object-position: top;
+    height: 31vh;
+  }
 }
 
 .hero h1 {
