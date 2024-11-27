@@ -90,8 +90,9 @@
 
 .heroImage {
   object-fit: cover;
+  object-position: bottom;
   aspect-ratio: 16/9;
-  height: 90vh;
+  height: 95vh;
   width: 100%;
 }
 
