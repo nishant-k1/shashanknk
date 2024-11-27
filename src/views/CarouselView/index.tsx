@@ -17,15 +17,6 @@ export default function CarouselView() {
       </div>
       <div>
         <Image
-          src="/heroAssets/hero1.jpeg"
-          height="900"
-          width="2100"
-          alt={""}
-          className={styles.heroImage}
-        />
-      </div>
-      <div>
-        <Image
           src="/heroAssets/hero2.jpeg"
           height="900"
           width="2100"
