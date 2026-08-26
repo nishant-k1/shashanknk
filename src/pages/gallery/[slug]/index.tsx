@@ -70,7 +70,13 @@ const GalleryImage = () => {
         }
       />
       <RootLayout>
-        <div style={{ padding: "1rem 2rem", background: "#1f1d2b" }}>
+        <div
+          style={{
+            padding: "0.75rem 1.25rem",
+            background: "#1f1d2b",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+          }}
+        >
           <Link
             href="/gallery"
             style={{
@@ -78,11 +84,12 @@ const GalleryImage = () => {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              fontSize: "1rem",
+              fontSize: "0.95rem",
               fontWeight: 500,
+              minHeight: "44px",
             }}
           >
-            ← Back to Gallery
+            ← Back to Gallery / गैलरी
           </Link>
         </div>
         <div className={styles.imageContaner}>
@@ -93,7 +100,7 @@ const GalleryImage = () => {
               alt={`Shashank Shekhar - ${imageName}`}
               src={imageSrc}
               className={styles.img}
-              priority
+              loading="eager"
             />
           ) : (
             <div style={{ color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>

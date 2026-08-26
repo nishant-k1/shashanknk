@@ -12,6 +12,7 @@ const HomePage = () => {
         canonical="/"
         ogImage="/heroAssets/shashank-modiji.jpeg"
         ogImageAlt="Shashank Shekhar with Prime Minister Narendra Modi"
+        secondaryOgImage="/dpSS.png"
         ogType="website"
       />
       <RootLayout>

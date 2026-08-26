@@ -14,7 +14,8 @@ export default function Custom404() {
       <RootLayout>
         <div
           style={{
-            minHeight: "60vh",
+            minHeight: "calc(100vh - 72px)",
+            width: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -23,6 +24,7 @@ export default function Custom404() {
             padding: "3rem 1.5rem",
             background: "#1f1d2b",
             color: "#fff",
+            boxSizing: "border-box",
           }}
         >
           <h1

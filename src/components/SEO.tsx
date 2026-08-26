@@ -10,6 +10,7 @@ export interface SEOProps {
   ogImageAlt?: string;
   ogImageWidth?: number;
   ogImageHeight?: number;
+  secondaryOgImage?: string;
   ogType?: "website" | "article" | "profile";
   keywords?: string[] | string;
   noindex?: boolean;
@@ -24,6 +25,7 @@ export const SEO: React.FC<SEOProps> = ({
   ogImageAlt = "Shashank Shekhar - BJP Bihar Leader",
   ogImageWidth = 1200,
   ogImageHeight = 630,
+  secondaryOgImage = siteConfig.profileImage,
   ogType = "website",
   keywords = siteConfig.keywords,
   noindex = false,
@@ -41,9 +43,16 @@ export const SEO: React.FC<SEOProps> = ({
       : `${siteConfig.siteUrl}${canonical.startsWith("/") ? "" : "/"}${canonical}`
     : siteConfig.siteUrl;
 
-  const fullOgImageUrl = ogImage.startsWith("http")
-    ? ogImage
-    : `${siteConfig.siteUrl}${ogImage.startsWith("/") ? "" : "/"}${ogImage}`;
+  const toAbsoluteUrl = (url: string) =>
+    url.startsWith("http")
+      ? url
+      : `${siteConfig.siteUrl}${url.startsWith("/") ? "" : "/"}${url}`;
+
+  const primaryOgImageUrl = toAbsoluteUrl(ogImage);
+  const secondaryOgImageUrl =
+    secondaryOgImage && secondaryOgImage !== ogImage
+      ? toAbsoluteUrl(secondaryOgImage)
+      : null;
 
   const keywordsString = Array.isArray(keywords)
     ? keywords.join(", ")
@@ -56,7 +65,7 @@ export const SEO: React.FC<SEOProps> = ({
     name: siteConfig.name,
     alternateName: siteConfig.hindiName,
     url: siteConfig.siteUrl,
-    image: `${siteConfig.siteUrl}${siteConfig.profileImage}`,
+    image: toAbsoluteUrl(siteConfig.profileImage),
     jobTitle: "Leader & Youth Activist",
     worksFor: {
       "@type": "Organization",
@@ -133,7 +142,7 @@ export const SEO: React.FC<SEOProps> = ({
         </>
       )}
 
-      {/* Open Graph (Facebook / LinkedIn / WhatsApp) */}
+      {/* Open Graph (Facebook / LinkedIn / WhatsApp / Telegram) */}
       <meta property="og:site_name" content={siteConfig.name} />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description} />
@@ -142,15 +151,29 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:locale" content={siteConfig.locale} />
       <meta property="og:locale:alternate" content={siteConfig.alternateLocale} />
 
-      <meta property="og:image" content={fullOgImageUrl} />
-      <meta property="og:image:secure_url" content={fullOgImageUrl} />
+      {/* Primary OG Image (Hero Carousel Banner) */}
+      <meta property="og:image" content={primaryOgImageUrl} />
+      <meta property="og:image:secure_url" content={primaryOgImageUrl} />
       <meta property="og:image:width" content={ogImageWidth.toString()} />
       <meta property="og:image:height" content={ogImageHeight.toString()} />
       <meta property="og:image:alt" content={ogImageAlt} />
       <meta
         property="og:image:type"
-        content={fullOgImageUrl.endsWith(".png") ? "image/png" : "image/jpeg"}
+        content={primaryOgImageUrl.endsWith(".png") ? "image/png" : "image/jpeg"}
       />
+
+      {/* Secondary OG Image (Profile / Portrait Photo) */}
+      {secondaryOgImageUrl && (
+        <>
+          <meta property="og:image" content={secondaryOgImageUrl} />
+          <meta property="og:image:secure_url" content={secondaryOgImageUrl} />
+          <meta property="og:image:alt" content={`${siteConfig.name} - Profile Portrait`} />
+          <meta
+            property="og:image:type"
+            content={secondaryOgImageUrl.endsWith(".png") ? "image/png" : "image/jpeg"}
+          />
+        </>
+      )}
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -158,7 +181,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:creator" content={siteConfig.social.twitterHandle} />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImageUrl} />
+      <meta name="twitter:image" content={primaryOgImageUrl} />
       <meta name="twitter:image:alt" content={ogImageAlt} />
 
       {/* Mobile & Browser Appearance */}

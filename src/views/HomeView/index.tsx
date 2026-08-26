@@ -23,18 +23,19 @@ const HomeView = ({}: HomeViewProps) => {
           <div>
             <h2>About Us</h2>
             <div className={styles.about}>
-              <div>
+              <div className={styles.aboutImageWrapper}>
                 <Link href="/gallery">
                   <Image
                     src="/dpSS.png"
                     alt="Shashank Shekhar - BJP Leader Begusarai, Bihar"
-                    height="300"
-                    width="300"
+                    height={400}
+                    width={400}
                     className={styles.aboutImg}
+                    loading="eager"
                   />
                 </Link>
               </div>
-              <div>
+              <div className={styles.aboutContent}>
                 <p>
                   आपका भाजपा युवा मोर्चा बिहार के साथ नेतृत्व में एक दृढ़
                   साझेदारी का स्वागत है, शशांक शेखर जी। हमारे धारावाहिकता के
@@ -75,7 +76,6 @@ const HomeView = ({}: HomeViewProps) => {
                   </span>
                   #बिहार #begusarai
                 </p>
-                {/* More about the organization */}
               </div>
             </div>
           </div>

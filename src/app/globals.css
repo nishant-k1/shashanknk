@@ -1,29 +1,42 @@
 :root {
+  --primary-bg: #2d2b3f;
+  --secondary-bg: #1f1d2b;
+  --accent-color: #d88a4f;
+  --accent-hover: #d63d29;
+  --text-main: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.75);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--secondary-bg);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: #2d2b3f;
-}
+header,
 footer {
-  background-color: #2d2b3f;
-}
-body {
-  padding: 0;
-  margin: 0;
+  background-color: var(--primary-bg);
 }
 
 p,
@@ -32,21 +45,53 @@ span,
 h1,
 h2,
 address {
-  color: lab(100 0 -0.03 / 0.78);
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.25;
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
+
+p {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.75;
+}
+
 a {
   padding: 0;
   margin: 0;
-  color: lab(100 0 -0.03 / 0.78);
+  color: var(--accent-color);
   text-decoration: none;
-  color: #d88a4f;
-}
-a:hover {
-  text-decoration: 2px underline #d63d29;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-/* Carousel */
+a:hover {
+  text-decoration: 2px underline var(--accent-hover);
+  color: #ff9d5c;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ant Design Carousel Dots Customization */
+.ant-carousel .slick-dots li button {
+  background: #ffffff !important;
+  opacity: 0.5 !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: var(--accent-color) !important;
+  opacity: 1 !important;
+  width: 24px !important;
+}
