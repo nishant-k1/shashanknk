@@ -1,0 +1,6 @@
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Sitemap index
+Sitemap: https://www.shashanknk.in/sitemap.xml

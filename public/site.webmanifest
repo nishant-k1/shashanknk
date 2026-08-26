@@ -1,0 +1,22 @@
+{
+  "name": "Shashank Shekhar - Official Website",
+  "short_name": "Shashank Shekhar",
+  "description": "Official website of Shashank Shekhar, BJP leader and youth activist from Begusarai, Bihar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d2b3f",
+  "theme_color": "#2d2b3f",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/dpSS.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

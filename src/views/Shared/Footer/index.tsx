@@ -61,10 +61,10 @@ const Footer = (props: Props) => {
           reserved.
         </p>
         <p>
-          Designed & developed by
+          Designed & developed with ♥️ by
           <span style={{ marginLeft: "4px" }}>
-            <Link href="https://www.quengenesisllc.com/#/">
-              Quengenesis LLC
+            <Link href="https://www.nexbaron.com/digital/">
+              Nexbaron Digital
             </Link>
           </span>
         </p>

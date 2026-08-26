@@ -27,7 +27,7 @@ const HomeView = ({}: HomeViewProps) => {
                 <Link href="/gallery">
                   <Image
                     src="/dpSS.png"
-                    alt="Hero Image"
+                    alt="Shashank Shekhar - BJP Leader Begusarai, Bihar"
                     height="300"
                     width="300"
                     className={styles.aboutImg}

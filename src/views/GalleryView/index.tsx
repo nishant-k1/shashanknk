@@ -46,10 +46,11 @@ const GalleryView = ({ id }: GalleryViewProps) => {
         >
           <Image
             src={image.url}
-            alt=""
+            alt={`Shashank Shekhar - Event photo ${image.url.split("/").pop()?.replace(/\.[^/.]+$/, "") || ""}`}
             height={image.height}
             width={image.width}
             className={styles.image}
+            loading="lazy"
           />
         </Link>
       ))}

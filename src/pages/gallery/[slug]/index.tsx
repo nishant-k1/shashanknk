@@ -1,31 +1,108 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import styles from "./Slug.module.css";
 import RootLayout from "@/app/layout";
+import SEO from "@/components/SEO";
+import { siteConfig } from "@/config/site";
 
-type Props = {};
-
-type Image = {
-  id?: string;
-  url?: string;
-};
-const GalleryImage = (props: Props) => {
+const GalleryImage = () => {
   const router = useRouter();
-  const src = router.query.slug as string;
+  const slug = router.query.slug;
+  const imageSrc = typeof slug === "string" ? slug : Array.isArray(slug) ? slug[0] : "";
+
+  // Extract a readable filename/title if available
+  const imageName = imageSrc ? imageSrc.split("/").pop()?.replace(/\.[^/.]+$/, "") : "Photo";
+  const displayTitle = `Photo - ${imageName} | Shashank Shekhar Gallery`;
+  const canonicalUrl = imageSrc ? `/gallery/${encodeURIComponent(imageSrc)}` : "/gallery";
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Gallery",
+        item: `${siteConfig.siteUrl}/gallery`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `Photo ${imageName}`,
+        item: `${siteConfig.siteUrl}${canonicalUrl}`,
+      },
+    ],
+  };
+
+  const imageSchema = imageSrc
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        contentUrl: `${siteConfig.siteUrl}${imageSrc.startsWith("/") ? "" : "/"}${imageSrc}`,
+        name: displayTitle,
+        description: "Photograph from the official gallery of Shashank Shekhar",
+        author: {
+          "@type": "Person",
+          name: siteConfig.name,
+        },
+      }
+    : null;
+
   return (
-    <RootLayout>
-      <div className={styles.imageContaner}>
-        <Image
-          height="1600"
-          width="2100"
-          // fill={true}
-          alt="image"
-          src={src}
-          className={styles.img}
-        />
-      </div>
-    </RootLayout>
+    <>
+      <SEO
+        title={displayTitle}
+        description="शशांक शेखर के सार्वजनिक कार्यक्रमों एवं गतिविधियों की तस्वीर - आधिकारिक फोटो गैलरी।"
+        canonical={canonicalUrl}
+        ogImage={imageSrc || siteConfig.ogImage}
+        ogImageAlt={`Shashank Shekhar - ${imageName}`}
+        ogType="article"
+        structuredData={
+          imageSchema ? [breadcrumbSchema, imageSchema] : [breadcrumbSchema]
+        }
+      />
+      <RootLayout>
+        <div style={{ padding: "1rem 2rem", background: "#1f1d2b" }}>
+          <Link
+            href="/gallery"
+            style={{
+              color: "#d88a4f",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              fontSize: "1rem",
+              fontWeight: 500,
+            }}
+          >
+            ← Back to Gallery
+          </Link>
+        </div>
+        <div className={styles.imageContaner}>
+          {imageSrc ? (
+            <Image
+              height="1600"
+              width="2100"
+              alt={`Shashank Shekhar - ${imageName}`}
+              src={imageSrc}
+              className={styles.img}
+              priority
+            />
+          ) : (
+            <div style={{ color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <p>Loading photo...</p>
+            </div>
+          )}
+        </div>
+      </RootLayout>
+    </>
   );
 };
 
